@@ -1,7 +1,11 @@
-import { useState, useEffect } from "react";
+import { Footer } from "./components/Footer";
+import { FormSection } from "./components/FormSection";
+import { AboutUs } from "./components/AboutUs";
+import { useState } from "react";
 import { Chart } from "./components/Chart";
 import { CustomNavbar } from "./components/CustomNavbar";
 import logo from "./img/logo.png";
+import teamIllustration from "./img/team_collaboration.svg";
 
 function App() {
   const [data, setAPIData] = useState({
@@ -47,16 +51,15 @@ function App() {
     setAPIData({ data: randomized });
   };
 
-  useEffect(() => {
-    setInterval(() => randomizeData(data.data), 5000);
-  }, []);
+  setInterval(() => randomizeData(data.data), 5000);
 
   return (
     <div>
       <CustomNavbar logo={logo} />
-      <div className="grid grid-flow-row items-center justify-center mt-20">
-        <Chart data={data.data} />
-      </div>
+      <Chart data={data.data} />
+      <AboutUs teamIllustration={teamIllustration} />
+      <FormSection />
+      <Footer />
     </div>
   );
 }
