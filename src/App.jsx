@@ -1,6 +1,5 @@
 import { Chart } from "./components/Chart";
 import { CustomNavbar } from "./components/CustomNavbar";
-import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./img/logo.png";
 
 function App() {
