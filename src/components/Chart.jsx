@@ -10,8 +10,8 @@ import {
 } from "recharts";
 export function Chart({ data }) {
   return (
-    <div>
-      <ResponsiveContainer minWidth="350px" minHeight="50vh">
+    <div className="max-w-3xl w-screen">
+      <ResponsiveContainer minWidth="100%" minHeight="50vh">
         <LineChart
           data={data}
           margin={{
