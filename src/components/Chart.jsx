@@ -23,7 +23,7 @@ export function Chart({ data }) {
         >
           <CartesianGrid stroke="#e6e6e6" strokeDasharray="3 3" />
           <XAxis dataKey="name" stroke="#e6e6e6" />
-          <YAxis stroke="#e6e6e6" />
+          <YAxis stroke="#e6e6e6" domain={["0", "100 "]} scale="sequential" />
           <Tooltip stroke="#e6e6e6" />
           <Legend />
           <Line
@@ -34,7 +34,7 @@ export function Chart({ data }) {
             activeDot={{
               r: 6,
             }}
-            unit=" kg/m³"
+            unit=" %"
           />
           <Line
             type="monotone"
